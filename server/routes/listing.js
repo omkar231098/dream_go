@@ -1,16 +1,19 @@
 const router = require("express").Router();
+require("dotenv").config();
 const multer = require("multer");
 const ImageKit = require("imagekit");
 const Listing = require("../models/Listing");
-const User = require("../models/User")
+
+
+
 
 const imagekit = new ImageKit({
-  publicKey: "public_x9okkBAOC9iYKNGAeLpLyEP5Xgw=",
-  privateKey: "private_kf0Kvq1DABlZ4YvtY0yvnjvPGPw=",
-  urlEndpoint: "https://ik.imagekit.io/zkzb9rdv8",
+  publicKey: process.env.publicKey,
+  privateKey: process.env.privateKey,
+  urlEndpoint: process.env.urlEndpoint,
 });
 
-const storage = multer.memoryStorage(); // Store uploaded files in memory
+const storage = multer.memoryStorage(); 
 const upload = multer({ storage });
 
 
@@ -50,16 +53,21 @@ router.post("/create", upload.array("listingPhotos"), async (req, res) => {
     }
 
     // Upload listing photos to ImageKit.io
-    const listingPhotoPaths = await Promise.all(
+    const listingPhotoData = await Promise.all(
       listingPhotos.map(async (file) => {
         const response = await imagekit.upload({
           file: file.buffer,
           fileName: file.originalname,
           folder: "/uploads/listings",
         });
-        return response.url; // Save the URL provided by ImageKit.io
+        return {
+          fileId: response.fileId,
+          url: response.url,
+        };
       })
     );
+
+    const listingPhotoPaths = listingPhotoData.map((data) => data);
 
     const newListing = new Listing({
       creator,
@@ -125,8 +133,11 @@ router.get("/search/:search", async (req, res) => {
     } else {
       listings = await Listing.find({
         $or: [
-          { category: {$regex: search, $options: "i" } },
-          { title: {$regex: search, $options: "i" } },
+          { city: { $regex: search, $options: "i" } }, // Search by city
+          { category: { $regex: search, $options: "i" } }, // Search by category
+          { country: { $regex: search, $options: "i" } }, // Search by country
+          { title: { $regex: search, $options: "i" } }, // Search by title
+          { province: { $regex: search, $options: "i" } }, // Search by province
         ]
       }).populate("creator")
     }
@@ -148,5 +159,54 @@ router.get("/:listingId", async (req, res) => {
     res.status(404).json({ message: "Listing can not found!", error: err.message })
   }
 })
+
+
+
+
+
+// Delete a listing by ID
+router.delete("/:listingId", async (req, res) => {
+  try {
+    const { listingId } = req.params;
+
+    // Fetch the listing before deleting it
+    const listing = await Listing.findById(listingId);
+
+    // Check if the listing exists
+    if (!listing) {
+      return res.status(404).json({ success: false, message: "Listing not found!" });
+    }
+
+    // Extract file IDs from the listing
+    const fileIds = listing.listingPhotoPaths.map((photo) => photo.fileId);
+
+    // Check if file IDs are valid
+    if (!fileIds || !Array.isArray(fileIds) || fileIds.length === 0) {
+      return res.status(400).json({ success: false, message: 'Invalid or empty fileIds array' });
+    }
+
+    
+    const response = await imagekit.bulkDeleteFiles(fileIds);
+
+    const deletedListing = await Listing.findByIdAndDelete(listingId);
+   
+      res.status(200).json({
+        success: true,
+        message: 'Listing and associated images deleted successfully',
+        deletedListing,
+        response,
+        deletedFileIds: fileIds,
+      });
+   
+    
+  } catch (err) {
+    // Handle any internal server errors
+    res.status(500).json({ success: false, message: "Internal Server Error", error: err.message });
+  }
+});
+
+
+
+
 
 module.exports = router

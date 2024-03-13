@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/Register.scss";
-
+import Navbar from "../components/Navbar";
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -49,7 +49,7 @@ const RegisterPage = () => {
         toast.success("Registration successful! Redirecting to login page.", {
           position: "top-center",
         });
-        navigate("/login");
+        setTimeout(() => navigate("/login"), 5000); // Navigate after 5 seconds
       } else {
         const responseData = await response.json();
         const errorMessage = responseData.message || "Registration failed";
@@ -63,7 +63,9 @@ const RegisterPage = () => {
     }
   };
   return (
-    <div className="register">
+    <>
+      <Navbar   showSearchBar={false}/>
+     <div className="register">
       <div className="register_content">
         <form className="register_content_form" onSubmit={handleSubmit}>
           <input
@@ -135,7 +137,11 @@ const RegisterPage = () => {
         <a href="/login">Already have an account? Log In Here</a>
       </div>
     </div>
+    </>
+   
   );
 };
 
 export default RegisterPage;
+
+

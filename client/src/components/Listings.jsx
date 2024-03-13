@@ -12,27 +12,28 @@ const Listings = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const listings = useSelector((state) => state.listings);
 
-  const getFeedListings = async () => {
-    try {
-      const response = await fetch(
-        selectedCategory !== "All"
-          ? `http://localhost:8500/properties?category=${selectedCategory}`
-          : "http://localhost:8500/properties",
-        {
-          method: "GET",
-        }
-      );
-      const data = await response.json();
-      dispatch(setListings({ listings: data }));
-      setLoading(false);
-    } catch (err) {
-      console.log("Fetch Listings Failed", err.message);
-    }
-  };
-
   useEffect(() => {
-    getFeedListings();
-  }, [selectedCategory]);
+    const getFeedListings = async () => {
+      try {
+        const response = await fetch(
+          selectedCategory !== "All"
+            ? `http://localhost:8500/properties?category=${selectedCategory}`
+            : "http://localhost:8500/properties",
+          {
+            method: "GET",
+          }
+        );
+        const data = await response.json();
+        dispatch(setListings({ listings: data }));
+        setLoading(false);
+      } catch (err) {
+        console.log("Fetch Listings Failed", err.message);
+      }
+    };
+  
+    getFeedListings(); // Call getFeedListings inside useEffect
+  
+  }, [selectedCategory, dispatch]); // Include getFeedListings in the dependency array
 
   return (
     <>
@@ -78,6 +79,7 @@ const Listings = () => {
                 type={type}
                 price={price}
                 booking={booking}
+                showLikeButton={true}
               />
             )
           )}

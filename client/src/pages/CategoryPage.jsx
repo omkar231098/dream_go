@@ -25,6 +25,7 @@ const CategoryPage = () => {
       );
 
       const data = await response.json();
+      console.log(data)
       dispatch(setListings({ listings: data }));
       setLoading(false);
     } catch (err) {
@@ -36,45 +37,53 @@ const CategoryPage = () => {
     getFeedListings();
   }, [getFeedListings]);
 
-  return loading ? (
-    <Loader />
-  ) : (
+  return (
     <>
       <Navbar />
       <h1 className="title-list">{category} listings</h1>
-      <div className="list">
-        {listings?.map(
-          ({
-            _id,
-            creator,
-            listingPhotoPaths,
-            city,
-            province,
-            country,
-            category,
-            type,
-            price,
-            booking = false,
-          }) => (
-            <ListingCard
-              key={_id} // don't forget to add key prop
-              listingId={_id}
-              creator={creator}
-              listingPhotoPaths={listingPhotoPaths}
-              city={city}
-              province={province}
-              country={country}
-              category={category}
-              type={type}
-              price={price}
-              booking={booking}
-            />
-          )
-        )}
-      </div>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="list">
+          {listings && listings.length > 0 ? (
+            listings.map(
+              ({
+                _id,
+                creator,
+                listingPhotoPaths,
+                city,
+                province,
+                country,
+                category,
+                type,
+                price,
+                booking = false,
+              }) => (
+                <ListingCard
+                  key={_id}
+                  listingId={_id}
+                  creator={creator}
+                  listingPhotoPaths={listingPhotoPaths}
+                  city={city}
+                  province={province}
+                  country={country}
+                  category={category}
+                  type={type}
+                  price={price}
+                  booking={booking}
+                  showLikeButton={true}
+                />
+              )
+            )
+          ) : (
+            <p>No listings available for {category}.</p>
+          )}
+        </div>
+      )}
       <Footer />
     </>
   );
+
 };
 
 export default CategoryPage;

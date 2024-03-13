@@ -27,6 +27,7 @@ const ListingDetails = () => {
       );
 
       const data = await response.json();
+      console.log(data)
       setListing(data);
       setLoading(false);
     } catch (err) {
@@ -102,7 +103,7 @@ const ListingDetails = () => {
 
         <div className="photos">
           {listing.listingPhotoPaths?.map((item, index) => (
-            <img key={index} src={item} alt="listing photo" /> // Updated to use ImageKit.io URL
+            <img key={index} src={item.url} alt="listing photo" /> // Updated to use ImageKit.io URL
           ))}
         </div>
 
@@ -175,7 +176,7 @@ const ListingDetails = () => {
                 type="submit"
                 onClick={handleSubmit}
               >
-                BOOKING
+                Reserve
               </button>
             </div>
           </div>

@@ -11,6 +11,9 @@ import PropertyList from "./pages/PropertyList";
 import ReservationList from "./pages/ReservationList";
 import CategoryPage from "./pages/CategoryPage";
 import SearchPage from "./pages/SearchPage";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -31,6 +34,7 @@ function App() {
           <Route path="/:userId/reservations" element={<ReservationList />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </div>
   );
 }

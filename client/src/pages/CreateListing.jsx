@@ -11,6 +11,8 @@ import { BiTrash } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer"
+import { toast } from 'react-toastify';
+
 
 const CreateListing = () => {
   const [category, setCategory] = useState("");
@@ -134,9 +136,15 @@ const CreateListing = () => {
       });
 
       if (response.ok) {
-        navigate("/");
+        toast.success("Place is added successfully! Redirecting to Home Page.", {
+          position: "top-center",
+        });
+        setTimeout(() => navigate("/"), 3000); 
       }
     } catch (err) {
+      toast.error(err.message, {
+        position: "top-center",
+      });
       console.log("Publish Listing failed", err.message);
     }
   };
@@ -228,7 +236,7 @@ const CreateListing = () => {
                 <p>Province</p>
                 <input
                   type="text"
-                  placeholder="Province"
+                  placeholder="State"
                   name="province"
                   value={formLocation.province}
                   onChange={handleChangeLocation}
@@ -499,7 +507,7 @@ const CreateListing = () => {
                 required
               />
               <p>Now, set your PRICE</p>
-              <span>$</span>
+              <span>₹</span>
               <input
                 type="number"
                 placeholder="100"

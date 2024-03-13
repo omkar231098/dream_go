@@ -3,6 +3,9 @@ import "../styles/Login.scss"
 import { setLogin } from "../redux/state";
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Navbar from "../components/Navbar";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -27,22 +30,38 @@ const LoginPage = () => {
       /* Get data after fetching */
       const loggedIn = await response.json()
 
-      if (loggedIn) {
+console.log(loggedIn.message)
+
+      if (loggedIn.message==="Login successful! Redirecting to Home page.") {
         dispatch (
           setLogin({
             user: loggedIn.user,
             token: loggedIn.token
           })
         )
-        navigate("/")
+        toast.success(loggedIn.message, {
+          position: "top-center",
+        });
+       navigate("/")
+      }else{
+        toast.error(loggedIn.message, {
+          position: "top-center",
+        });
       }
 
+
+
     } catch (err) {
+      toast.error(err.message, {
+        position: "top-center",
+      });
       console.log("Login failed", err.message)
     }
   }
 
   return (
+    <>
+     <Navbar   showSearchBar={false}/>
     <div className="login">
       <div className="login_content">
         <form className="login_content_form" onSubmit={handleSubmit}>
@@ -65,6 +84,8 @@ const LoginPage = () => {
         <a href="/register">Don't have an account? Sign In Here</a>
       </div>
     </div>
+    </>
+    
   );
 };
 

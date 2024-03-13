@@ -3,7 +3,7 @@
 
 .login {
   width: 100vw;
-  height: 100vh;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@
   // background: url("../../public/assets/login.png") center;
   // background-size: cover;
   background-color: #ffffff;
-
+// border: 1px solid rgb(55, 0, 255);
   &_content {
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     width: 30%;
     padding: 40px;
     background-color: transparent;
-  
+    // border: 1px solid red;
     border-radius: 20px;
     box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
     @include lg {

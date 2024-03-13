@@ -4,13 +4,13 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const ImageKit = require("imagekit");
 const User = require("../models/User");
-
+require("dotenv").config();
 
 // Initialize ImageKit.io client
 const imagekit = new ImageKit({
-  publicKey: "public_x9okkBAOC9iYKNGAeLpLyEP5Xgw=",
-  privateKey: "private_kf0Kvq1DABlZ4YvtY0yvnjvPGPw=",
-  urlEndpoint: "https://ik.imagekit.io/zkzb9rdv8",
+  publicKey: process.env.publicKey,
+  privateKey: process.env.privateKey,
+  urlEndpoint: process.env.urlEndpoint,
 });
 
 // Upload image function
@@ -28,6 +28,8 @@ async function uploadImage(file) {
     throw error;
   }
 }
+
+
 const storage = multer.memoryStorage(); // Store uploaded files in memory
 const upload = multer({ storage });
 
@@ -93,24 +95,24 @@ router.post("/login", async (req, res) => {
     /* Check if user exists */
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(409).json({ message: "User doesn't exist!" });
+      return res.status(409).json({ message: "Email is not found, Please Register!" });
     }
 
     /* Compare the password with the hashed password */
     const isMatch = await bcrypt.compare(password, user.password)
     if (!isMatch) {
-      return res.status(400).json({ message: "Invalid Credentials!"})
+      return res.status(400).json({ message: "Password is incorrect"})
     }
 
     /* Generate JWT token */
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
     delete user.password
 
-    res.status(200).json({ token, user })
+    res.status(200).json({ token, user, message: "Login successful! Redirecting to Home page."} )
 
   } catch (err) {
     console.log(err)
-    res.status(500).json({ error: err.message })
+    res.status(500).json({ message: err.message })
   }
 })
 
