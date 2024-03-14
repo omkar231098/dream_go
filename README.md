@@ -156,3 +156,22 @@ The logger middleware is integrated using the following steps:
 
 DreamGO uses a rate limiter to control the number of requests a user can make within a specific time frame. This helps prevent abuse and ensures fair usage of the application.
 
+## Validator
+
+Input validation is essential for ensuring that user-submitted data is accurate and secure. DreamGO employs a validator to check and sanitize user input.
+
+## Screenshots
+
+## 1. HomePage
+
+
+## Deployed Link
+The PDF Maker Frontend is deployed at https://dreamgo-green.vercel.app/
+
+## Contribution
+
+We welcome contributions! If you have suggestions or improvements for the error handling process, please follow the [Contributing Guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
