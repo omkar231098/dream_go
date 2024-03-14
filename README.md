@@ -10,7 +10,6 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [API Routes](#api-routes)
-- [Authentication](#authentication)
 - [Logger](#logger)
 - [Rate Limiter](#rate-limiter)
 - [Validator](#validator)
@@ -138,3 +137,22 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
 - **Get User Reservations**
   - Route: `GET /users/:userId/reservations`
   - Description: Retrieve reservations made by a user.
+
+## Logger
+
+### Overview
+
+The logger middleware is responsible for logging various events and errors that occur during the execution of DreamGO. It helps in debugging, monitoring, and understanding the application's behavior.
+
+### Usage
+
+The logger middleware is integrated using the following steps:
+
+1. **Installation:**
+   ```bash
+   npm install --save winston
+
+## Rate Limiter
+
+DreamGO uses a rate limiter to control the number of requests a user can make within a specific time frame. This helps prevent abuse and ensures fair usage of the application.
+
