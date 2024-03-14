@@ -75,3 +75,66 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
     ```
     The API server will be running at `http://localhost:8500`.
 
+## API Routes
+
+### Authentication Routes
+
+- **User Registration**
+  - Route: `POST /auth/register`
+  - Description: Register a new user.
+
+- **User Login**
+  - Route: `POST /auth/login`
+  - Description: Authenticate user login.
+ 
+### Booking Routes
+
+- **Create Booking**
+  - Route: `POST /bookings/create`
+  - Description: Create a new booking.
+
+- **Delete Booking**
+  - Route: `DELETE /bookings/delete/:id`
+  - Description: Delete a booking.
+
+### Listing Routes
+
+- **Create Listing**
+  - Route: `POST /listings/create`
+  - Description: Create a new property listing.
+
+- **Get Listings by Category**
+  - Route: `GET /listings`
+  - Query Parameter: `category`
+  - Description: Retrieve property listings by category.
+
+- **Search Listings**
+  - Route: `GET /listings/search/:search`
+  - Parameter: `search`
+  - Description: Search property listings by keyword.
+
+- **Get Listing Details**
+  - Route: `GET /listings/:listingId`
+  - Description: Retrieve details of a specific property listing.
+
+- **Delete Listing**
+  - Route: `DELETE /listings/:listingId`
+  - Description: Delete a property listing.
+
+### User Routes
+
+- **Get User Trips**
+  - Route: `GET /users/:userId/trips`
+  - Description: Retrieve trips associated with a user.
+
+- **Add/Remove Listing to/from Wishlist**
+  - Route: `PATCH /users/:userId/:listingId`
+  - Description: Add or remove a listing from a user's wishlist.
+
+- **Get User Properties**
+  - Route: `GET /users/:userId/properties`
+  - Description: Retrieve properties listed by a user.
+
+- **Get User Reservations**
+  - Route: `GET /users/:userId/reservations`
+  - Description: Retrieve reservations made by a user.
