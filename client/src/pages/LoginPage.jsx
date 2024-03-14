@@ -42,7 +42,7 @@ console.log(loggedIn.message)
         toast.success(loggedIn.message, {
           position: "top-center",
         });
-       navigate("/")
+        setTimeout(() => navigate("/"), 3000); // Navigate after 5 seconds
       }else{
         toast.error(loggedIn.message, {
           position: "top-center",

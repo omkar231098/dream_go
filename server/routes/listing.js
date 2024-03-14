@@ -3,8 +3,8 @@ require("dotenv").config();
 const multer = require("multer");
 const ImageKit = require("imagekit");
 const Listing = require("../models/Listing");
-
-
+const logger = require("../logger/logger"); 
+const limiter = require("../ratelimiter/limiter");
 
 
 const imagekit = new ImageKit({
@@ -17,12 +17,8 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 
-
-
-
-
 /* CREATE LISTING */
-router.post("/create", upload.array("listingPhotos"), async (req, res) => {
+router.post("/create",limiter , upload.array("listingPhotos"), async (req, res) => {
   try {
     /* Take the information from the form */
     const {
@@ -49,6 +45,7 @@ router.post("/create", upload.array("listingPhotos"), async (req, res) => {
     const listingPhotos = req.files;
 
     if (!listingPhotos) {
+      logger.warn('No file uploaded.');
       return res.status(400).send("No file uploaded.");
     }
 
@@ -93,8 +90,11 @@ router.post("/create", upload.array("listingPhotos"), async (req, res) => {
 
     await newListing.save();
 
+    logger.info('Listing created successfully', { listingId: newListing._id });
+
     res.status(200).json(newListing);
   } catch (err) {
+    logger.error('Fail to create Listing', { error: err.message });
     res
       .status(409)
       .json({ message: "Fail to create Listing", error: err.message });
@@ -103,69 +103,75 @@ router.post("/create", upload.array("listingPhotos"), async (req, res) => {
 });
 
 /* GET lISTINGS BY CATEGORY */
-router.get("/", async (req, res) => {
-  const qCategory = req.query.category
+router.get('/', async (req, res) => {
+  const qCategory = req.query.category;
 
   try {
-    let listings
+    let listings;
     if (qCategory) {
-      listings = await Listing.find({ category: qCategory }).populate("creator")
+      listings = await Listing.find({ category: qCategory }).populate('creator');
     } else {
-      listings = await Listing.find().populate("creator")
+      listings = await Listing.find().populate('creator');
     }
 
-    res.status(200).json(listings)
+    logger.info('Listings fetched successfully');
+    res.status(200).json(listings);
   } catch (err) {
-    res.status(404).json({ message: "Fail to fetch listings", error: err.message })
-    console.log(err)
+    logger.error('Fail to fetch listings', { error: err.message });
+    res.status(404).json({ message: 'Fail to fetch listings', error: err.message });
   }
-})
+});
 
 /* GET LISTINGS BY SEARCH */
-router.get("/search/:search", async (req, res) => {
-  const { search } = req.params
+router.get('/search/:search', async (req, res) => {
+  const { search } = req.params;
 
   try {
-    let listings = []
+    let listings = [];
 
-    if (search === "all") {
-      listings = await Listing.find().populate("creator")
+    if (search === 'all') {
+      listings = await Listing.find().populate('creator');
     } else {
       listings = await Listing.find({
         $or: [
-          { city: { $regex: search, $options: "i" } }, // Search by city
-          { category: { $regex: search, $options: "i" } }, // Search by category
-          { country: { $regex: search, $options: "i" } }, // Search by country
-          { title: { $regex: search, $options: "i" } }, // Search by title
-          { province: { $regex: search, $options: "i" } }, // Search by province
-        ]
-      }).populate("creator")
+          { city: { $regex: search, $options: 'i' } }, // Search by city
+          { category: { $regex: search, $options: 'i' } }, // Search by category
+          { country: { $regex: search, $options: 'i' } }, // Search by country
+          { title: { $regex: search, $options: 'i' } }, // Search by title
+          { province: { $regex: search, $options: 'i' } }, // Search by province
+        ],
+      }).populate('creator');
     }
 
-    res.status(200).json(listings)
+    logger.info('Listings fetched successfully for search:', { search });
+    res.status(200).json(listings);
   } catch (err) {
-    res.status(404).json({ message: "Fail to fetch listings", error: err.message })
-    console.log(err)
+    logger.error('Fail to fetch listings for search:', { search, error: err.message });
+    res.status(404).json({ message: 'Fail to fetch listings', error: err.message });
   }
-})
+});
 
 /* LISTING DETAILS */
-router.get("/:listingId", async (req, res) => {
+router.get('/:listingId', async (req, res) => {
   try {
-    const { listingId } = req.params
-    const listing = await Listing.findById(listingId).populate("creator")
-    res.status(202).json(listing)
+    const { listingId } = req.params;
+    const listing = await Listing.findById(listingId).populate('creator');
+
+    if (listing) {
+      logger.info('Listing fetched successfully', { listingId });
+      res.status(202).json(listing);
+    } else {
+      logger.warn('Listing not found', { listingId });
+      res.status(404).json({ message: 'Listing not found!' });
+    }
   } catch (err) {
-    res.status(404).json({ message: "Listing can not found!", error: err.message })
+    logger.error('Failed to fetch listing', { listingId: req.params.listingId, error: err.message });
+    res.status(500).json({ message: 'Internal Server Error', error: err.message });
   }
-})
-
-
-
-
+});
 
 // Delete a listing by ID
-router.delete("/:listingId", async (req, res) => {
+router.delete('/:listingId', async (req, res) => {
   try {
     const { listingId } = req.params;
 
@@ -174,7 +180,8 @@ router.delete("/:listingId", async (req, res) => {
 
     // Check if the listing exists
     if (!listing) {
-      return res.status(404).json({ success: false, message: "Listing not found!" });
+      logger.warn('Listing not found for deletion', { listingId });
+      return res.status(404).json({ success: false, message: 'Listing not found!' });
     }
 
     // Extract file IDs from the listing
@@ -182,29 +189,36 @@ router.delete("/:listingId", async (req, res) => {
 
     // Check if file IDs are valid
     if (!fileIds || !Array.isArray(fileIds) || fileIds.length === 0) {
+      logger.warn('Invalid or empty fileIds array', { listingId, fileIds });
       return res.status(400).json({ success: false, message: 'Invalid or empty fileIds array' });
     }
 
-    
+    // Delete files from ImageKit
     const response = await imagekit.bulkDeleteFiles(fileIds);
 
+    // Delete the listing
     const deletedListing = await Listing.findByIdAndDelete(listingId);
-   
-      res.status(200).json({
-        success: true,
-        message: 'Listing and associated images deleted successfully',
-        deletedListing,
-        response,
-        deletedFileIds: fileIds,
-      });
-   
-    
+
+    logger.info('Listing and associated images deleted successfully', {
+      listingId,
+      deletedListing,
+      response,
+      deletedFileIds: fileIds,
+    });
+
+    res.status(200).json({
+      success: true,
+      message: 'Listing and associated images deleted successfully',
+      deletedListing,
+      response,
+      deletedFileIds: fileIds,
+    });
   } catch (err) {
     // Handle any internal server errors
-    res.status(500).json({ success: false, message: "Internal Server Error", error: err.message });
+    logger.error('Failed to delete the listing', { listingId: req.params.listingId, error: err.message });
+    res.status(500).json({ success: false, message: 'Internal Server Error', error: err.message });
   }
 });
-
 
 
 

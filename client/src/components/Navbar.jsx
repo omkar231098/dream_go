@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { setLogout } from "../redux/state";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Navbar = ({ showSearchBar = true, showBecomeHostText = true }) => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
@@ -13,6 +14,25 @@ const Navbar = ({ showSearchBar = true, showBecomeHostText = true }) => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+
+
+
+  const handleBecomeHostClick = () => {
+    if (user) {
+     
+      
+      
+    } else {
+      // Show toast message for non-logged-in users
+     
+
+      toast.warning("Please login to become a host.", {
+        position: "top-center",
+        
+      });
+    }
+  };
+
 
   return (
     <div className="navbar">
@@ -40,15 +60,17 @@ const Navbar = ({ showSearchBar = true, showBecomeHostText = true }) => {
       )}
 
       <div className="navbar_right">
-        {user ? (
-          <Link to="/create-listing" className="host">
-            Become A Host
-          </Link>
-        ) : (
-          <Link to="/login" className="host">
-            Become A Host
-          </Link>
-        )}
+        
+      <ToastContainer />
+      {user ? (
+        <Link to="/create-listing" className="host" onClick={handleBecomeHostClick}>
+          Become A Host
+        </Link>
+      ) : (
+        <Link to="/login" className="host" onClick={handleBecomeHostClick}>
+          Become A Host
+        </Link>
+      )}
 
         <button
           className="navbar_right_account"

@@ -49,7 +49,7 @@ const RegisterPage = () => {
         toast.success("Registration successful! Redirecting to login page.", {
           position: "top-center",
         });
-        setTimeout(() => navigate("/login"), 5000); // Navigate after 5 seconds
+        setTimeout(() => navigate("/login"), 3000); // Navigate after 5 seconds
       } else {
         const responseData = await response.json();
         const errorMessage = responseData.message || "Registration failed";
@@ -121,14 +121,14 @@ const RegisterPage = () => {
             required
           />
           <label htmlFor="image">
-            <img src="/assets/addImage.png" alt="add profile photo" />
+            <img src="/assets/addImage.png" alt="upload" />
             <p>Upload Your Photo</p>
           </label>
 
           {formData.profileImage && (
             <img
               src={URL.createObjectURL(formData.profileImage)}
-              alt="profile photo"
+              alt="profile"
               style={{ maxWidth: "80px" }}
             />
           )}

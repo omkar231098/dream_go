@@ -36,6 +36,7 @@ console.log(wishList)
               type={type}
               price={price}
               booking={booking}
+              showLikeButton={true}
             />
           )
         )}

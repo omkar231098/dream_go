@@ -10,6 +10,7 @@ import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
+import { toast } from 'react-toastify';
 
 const ListingDetails = () => {
   const [loading, setLoading] = useState(true);
@@ -82,7 +83,12 @@ const ListingDetails = () => {
       });
 
       if (response.ok) {
-        navigate(`/${customerId}/trips`);
+        toast.success("Reservation is successful.", {
+          position: "top-center",
+        });
+
+        setTimeout(() => navigate(`/${customerId}/trips`), 3000); 
+      
       }
     } catch (err) {
       console.log("Submit Booking Failed.", err.message);
@@ -103,7 +109,7 @@ const ListingDetails = () => {
 
         <div className="photos">
           {listing.listingPhotoPaths?.map((item, index) => (
-            <img key={index} src={item.url} alt="listing photo" /> // Updated to use ImageKit.io URL
+            <img key={index} src={item.url} alt="listing" /> // Updated to use ImageKit.io URL
           ))}
         </div>
 
@@ -119,7 +125,7 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            src={listing.creator.profileImagePath} // Updated to use ImageKit.io URL
+            src={listing.creator.profileImagePath} alt="creator"// Updated to use ImageKit.io URL
           />
           <h3>
             Hosted by {listing.creator.firstName} {listing.creator.lastName}
