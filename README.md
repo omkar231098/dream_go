@@ -33,3 +33,45 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
 - **Responsive Design**: Enjoy seamless user experience across devices with a mobile-friendly and responsive website design.
 
 
+## Tech Stack
+
+- React: JavaScript library for building user interfaces
+- Node.js: JavaScript runtime
+- Express.js: Web application framework for Node.js
+- MongoDB: NoSQL database for storing user data
+- imagekit.io: Image optimization and delivery service
+- JWT: JSON Web Tokens for secure user authentication
+
+
+## Getting Started
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/omkar231098/dream_go.git
+   
+    ```
+   ```bash
+   cd dream_go
+    ```
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Set up environment variables:**
+    Create a `.env` file in the root directory and add the following:
+    ```env
+    PORT=8500
+    MONGO_URL="mongodb_database_url"
+    JWT_SECRET=mysecretkey
+    publicKey="imagekit.io_public_key"
+    privateKey="imagekit.io_private_key"
+    urlEndpoint="imagekit.io_url_endpoint"
+    ```
+
+4. **Run the application:**
+    ```bash
+    npm start
+    ```
+    The API server will be running at `http://localhost:8500`.
+
