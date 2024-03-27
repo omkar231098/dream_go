@@ -179,6 +179,27 @@ Input validation is essential for ensuring that user-submitted data is accurate 
 
 ## 1. HomePage
 
+![homepage](https://github.com/omkar231098/dream_go/assets/109202596/3f4cfb45-6228-4e39-83f0-d5d4d4656fe3)
+
+## 2. RegisterPage
+![register](https://github.com/omkar231098/dream_go/assets/109202596/1571de1e-21e2-42d1-a036-7dea080912b7)
+
+## 3. LoginPage
+
+![login](https://github.com/omkar231098/dream_go/assets/109202596/366e05df-351f-4b3a-8639-229afd691725)
+
+## 4. ReservationListPage
+
+
+
+## 5. WishListPage
+![wishlist](https://github.com/omkar231098/dream_go/assets/109202596/f42beeb7-7484-49fa-92e6-430fe4e4a84a)
+
+
+## 6. PropertyListPage
+![property](https://github.com/omkar231098/dream_go/assets/109202596/019c051a-db79-42d6-b4a5-333efe1a62da)
+
+
 
 ## Deployed Link
 The PDF Maker Frontend is deployed at https://dreamgo-green.vercel.app/
