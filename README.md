@@ -189,7 +189,8 @@ Input validation is essential for ensuring that user-submitted data is accurate 
 ![login](https://github.com/omkar231098/dream_go/assets/109202596/366e05df-351f-4b3a-8639-229afd691725)
 
 ## 4. ReservationListPage
-![reservation](https://github.com/omkar231098/dream_go/assets/109202596/fe9c721b-a273-48b5-9aaf-04f353a6116d)
+
+![reservation](https://github.com/omkar231098/dream_go/assets/109202596/9fe101ce-2e5e-4845-b979-4680c2ae4a33)
 
 
 
