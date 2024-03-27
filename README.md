@@ -13,7 +13,6 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
 - [Logger](#logger)
 - [Rate Limiter](#rate-limiter)
 - [Validator](#validator)
-- [Preview and Download](#preview-and-download)
 - [Screenshots](#screenshots)
 - [Deployed Link](#deployed-link)
 - [Contribution](#contribution)
@@ -137,6 +136,22 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
 - **Get User Reservations**
   - Route: `GET /users/:userId/reservations`
   - Description: Retrieve reservations made by a user.
+
+### Review Routes
+
+- **Create Review**
+  - Route: `POST /reviews/create/:listingId`
+  - Description: Create a new review for a listing.
+
+- **Get All Reviews**
+  - Route: `GET /reviews`
+  - Description: Retrieve all reviews.
+
+- **Get Reviews by Listing ID**
+  - Route: `GET /reviews/listing/:listingId`
+  - Description: Retrieve reviews for a specific listing.
+
+
 
 ## Logger
 
