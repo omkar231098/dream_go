@@ -217,7 +217,7 @@ Input validation is essential for ensuring that user-submitted data is accurate 
 
 
 ## Deployed Link
-The PDF Maker Frontend is deployed at https://dreamgo-green.vercel.app/
+The Dream GO Frontend is deployed at https://dreamgo-green.vercel.app/
 
 ## Contribution
 
