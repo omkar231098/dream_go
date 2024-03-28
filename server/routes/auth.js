@@ -5,7 +5,7 @@ const multer = require('multer');
 const ImageKit = require('imagekit');
 const User = require('../models/User');
 const logger = require('../logger/logger'); // Adjust the path accordingly
-const { registerValidator, loginValidator, validate } = require("../validators/validators"); 
+const { validateEmailAndPassword} = require("../validators/validators"); 
 require('dotenv').config();
 
 const imagekit = new ImageKit({
@@ -32,7 +32,7 @@ async function uploadImage(file) {
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-router.post('/register',registerValidator, validate, upload.single('profileImage'), async (req, res) => {
+router.post('/register', upload.single('profileImage'),validateEmailAndPassword, async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
     const profileImage = req.file;
@@ -74,7 +74,7 @@ router.post('/register',registerValidator, validate, upload.single('profileImage
   }
 });
 
-router.post('/login',loginValidator, validate, async (req, res) => {
+router.post('/login',validateEmailAndPassword, async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -110,3 +110,118 @@ router.post('/login',loginValidator, validate, async (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       properties:
+ *         firstName:
+ *           type: string
+ *         lastName:
+ *           type: string
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ *         profileImagePath:
+ *           type: string
+ *     SuccessResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: User registered successfully! You can now log in.
+ *     ErrorResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: User already exists!
+ */
+
+/**
+ * @swagger
+ * /auth/register:
+ *   post:
+ *     summary: Register a new user.
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             $ref: '#/components/schemas/User'
+ *     responses:
+ *       '200':
+ *         description: User registered successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '400':
+ *         description: No file uploaded or bad request.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       '409':
+ *         description: User already exists.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       '500':
+ *         description: Registration failed.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /auth/login:
+ *   post:
+ *     summary: Log in an existing user.
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *     responses:
+ *       '200':
+ *         description: Login successful.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '400':
+ *         description: Email not found or incorrect password.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ *       '500':
+ *         description: Login failed or server error.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+

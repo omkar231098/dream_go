@@ -52,3 +52,116 @@ router.delete("/delete/:id", async (req, res) => {
 });
 
 module.exports = router;
+
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Booking:
+ *       type: object
+ *       properties:
+ *         customerId:
+ *           type: string
+ *         hostId:
+ *           type: string
+ *         listingId:
+ *           type: string
+ *         startDate:
+ *           type: string
+ *           format: date
+ *         endDate:
+ *           type: string
+ *           format: date
+ *         totalPrice:
+ *           type: number
+ *     SuccessResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: Booking created successfully!
+ *         booking:
+ *           $ref: '#/components/schemas/Booking'
+ *     ErrorResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: Failed to create a new Booking
+ *         error:
+ *           type: string
+ *     DeletedResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: Booking deleted successfully!
+ *         deletedBooking:
+ *           $ref: '#/components/schemas/Booking'
+ *   securitySchemes:
+ *     BearerAuth:
+ *       type: apiKey
+ *       in: header
+ *       name: Authorization
+ *       description: Enter your Bearer token in the format "Bearer {token}"
+ */
+
+/**
+ * @swagger
+ * /bookings/create:
+ *   post:
+ *     summary: Create a new booking.
+ *     tags: [Bookings]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Booking'
+ *     responses:
+ *       '200':
+ *         description: Booking created successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '400':
+ *         description: Fail to create a new Booking.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /bookings/delete/{id}:
+ *   delete:
+ *     summary: Delete a booking by ID.
+ *     tags: [Bookings]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         type: string
+ *         description: Booking ID to delete.
+ *     responses:
+ *       '200':
+ *         description: Booking deleted successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/DeletedResponse'
+ *       '404':
+ *         description: Booking not found.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+

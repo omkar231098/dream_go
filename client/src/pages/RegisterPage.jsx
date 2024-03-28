@@ -32,7 +32,14 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
+    if (!formData.profileImage) {
+      toast.error("Please upload your photo.", {
+        position: "top-center",
+      });
+      return; // Prevent form submission
+    }
+    
     try {
       const register_form = new FormData();
   
@@ -40,7 +47,7 @@ const RegisterPage = () => {
         register_form.append(key, formData[key]);
       }
   
-      const response = await fetch("http://localhost:8500/auth/register", {
+      const response = await fetch("https://dark-teal-hatchling-hem.cyclic.app/auth/register", {
         method: "POST",
         body: register_form,
       });

@@ -18,7 +18,7 @@ const CategoryPage = () => {
   const getFeedListings = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:8500/properties?category=${category}`,
+        `https://dark-teal-hatchling-hem.cyclic.app/properties?category=${category}`,
         {
           method: "GET",
         }

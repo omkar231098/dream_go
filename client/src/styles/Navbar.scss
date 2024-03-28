@@ -11,8 +11,8 @@
   z-index: 1000; 
   width: 100%;
   background-color: #ffffff; 
+  // border: 1px solid red; 
 
-  // border: 1px solid red;
   @include sm {
     padding: 10px 20px;
   }

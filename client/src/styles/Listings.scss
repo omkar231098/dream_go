@@ -6,8 +6,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+ 
   gap: 60px;
-
+// border: 1px solid red;
   @include sm {
     padding: 50px 20px;
   }
@@ -18,7 +19,8 @@
     align-items: center;
     color: $darkgrey;
     cursor: pointer;
-
+   
+    
     &_icon {
       font-size: 30px;
     }
@@ -43,7 +45,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
+  gap: 20px;
 
   @include lg {
     padding: 0 20px 120px;

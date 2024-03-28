@@ -1,2 +1,241 @@
 {"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-13T16:53:33.834Z"}
 {"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-13T16:53:33.841Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-18T15:16:53.714Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-18T15:16:53.719Z"}
+{"level":"info","message":"POST /review/create/65f30a34f4b705c0cc19da3b - 404 - 4ms","method":"POST","responseTime":"4ms","status":404,"timestamp":"2024-03-18T15:18:11.795Z","url":"/review/create/65f30a34f4b705c0cc19da3b"}
+{"level":"info","message":"POST /review/create/65f30a34f4b705c0cc19da3b - 404 - 1ms","method":"POST","responseTime":"1ms","status":404,"timestamp":"2024-03-18T15:18:12.857Z","url":"/review/create/65f30a34f4b705c0cc19da3b"}
+{"level":"info","message":"POST /review/create/65f30a34f4b705c0cc19da3b - 404 - 1ms","method":"POST","responseTime":"1ms","status":404,"timestamp":"2024-03-18T15:18:18.855Z","url":"/review/create/65f30a34f4b705c0cc19da3b"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-18T15:18:46.304Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-18T15:18:46.319Z"}
+{"level":"info","message":"POST /review/create/65f30a34f4b705c0cc19da3b - 404 - 3ms","method":"POST","responseTime":"3ms","status":404,"timestamp":"2024-03-18T15:18:55.471Z","url":"/review/create/65f30a34f4b705c0cc19da3b"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-18T15:21:52.451Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-18T15:21:52.455Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-18T15:24:30.154Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-18T15:24:30.166Z"}
+{"level":"info","message":"POST /review/create/65f30a34f4b705c0cc19da3b - 404 - 3ms","method":"POST","responseTime":"3ms","status":404,"timestamp":"2024-03-18T15:27:11.180Z","url":"/review/create/65f30a34f4b705c0cc19da3b"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T11:58:55.967Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T11:58:55.981Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:05:00.033Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:05:00.041Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 295ms","method":"POST","responseTime":"295ms","status":500,"timestamp":"2024-03-19T12:05:03.884Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:16:09.597Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:16:09.613Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:20:45.520Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:20:45.531Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:22:02.205Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:22:02.220Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:24:29.651Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:24:29.666Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 14ms","method":"POST","responseTime":"14ms","status":500,"timestamp":"2024-03-19T12:25:39.417Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:33:05.355Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:33:05.362Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:34:23.129Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:34:23.143Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 532ms","method":"POST","responseTime":"532ms","status":500,"timestamp":"2024-03-19T12:34:24.789Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:41:47.524Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:41:47.534Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 1231ms","method":"POST","responseTime":"1231ms","status":500,"timestamp":"2024-03-19T12:42:03.167Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:44:13.085Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:44:13.092Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 768ms","method":"POST","responseTime":"768ms","status":500,"timestamp":"2024-03-19T12:48:24.175Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:52:38.273Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:52:38.287Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 7ms","method":"POST","responseTime":"7ms","status":500,"timestamp":"2024-03-19T12:52:42.379Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 2ms","method":"POST","responseTime":"2ms","status":500,"timestamp":"2024-03-19T12:52:53.870Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 10ms","method":"POST","responseTime":"10ms","status":500,"timestamp":"2024-03-19T12:53:36.761Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 3ms","method":"POST","responseTime":"3ms","status":500,"timestamp":"2024-03-19T12:53:37.286Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 2ms","method":"POST","responseTime":"2ms","status":500,"timestamp":"2024-03-19T12:53:37.426Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 2ms","method":"POST","responseTime":"2ms","status":500,"timestamp":"2024-03-19T12:53:37.658Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 500 - 2ms","method":"POST","responseTime":"2ms","status":500,"timestamp":"2024-03-19T12:53:37.827Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:53:38.740Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:53:38.741Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:53:56.584Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:53:56.596Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 200 - 1002ms","method":"POST","responseTime":"1002ms","status":200,"timestamp":"2024-03-19T12:53:59.929Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 200 - 942ms","method":"POST","responseTime":"942ms","status":200,"timestamp":"2024-03-19T12:57:34.987Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:59:08.673Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:59:08.687Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:59:29.346Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:59:29.350Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T12:59:59.836Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T12:59:59.844Z"}
+{"level":"info","message":"GET /review/create/65f85d8c2bb6fccac78084d3 - 404 - 7ms","method":"GET","responseTime":"7ms","status":404,"timestamp":"2024-03-19T13:00:17.930Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/create/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:00:19.484Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/ - 200 - 492ms","method":"GET","responseTime":"492ms","status":200,"timestamp":"2024-03-19T13:00:24.710Z","url":"/review/"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T13:15:10.518Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T13:15:10.526Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T13:17:41.711Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T13:17:41.718Z"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 4ms","method":"GET","responseTime":"4ms","status":404,"timestamp":"2024-03-19T13:46:51.381Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:46:52.088Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:46:52.250Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:46:52.600Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:46:52.722Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:13.493Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:13.929Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:14.050Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:14.186Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:14.386Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:14.536Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:14.674Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:14.800Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:17.866Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:18.002Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:18.129Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:18.250Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:52.656Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:47:53.318Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:47:53.459Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:47:53.595Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:47:53.702Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:47:53.825Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:32.739Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:33.139Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:48:33.275Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:33.382Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:33.502Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:33.622Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:33.750Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:33.871Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:48:34.178Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:34.350Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:34.463Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T13:48:41.499Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T13:48:41.507Z"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 8ms","method":"GET","responseTime":"8ms","status":404,"timestamp":"2024-03-19T13:48:45.993Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:54.732Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:48:55.126Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:48:55.294Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"POST /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"POST","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:48:58.344Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:49:00.773Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/ - 200 - 452ms","method":"GET","responseTime":"452ms","status":200,"timestamp":"2024-03-19T13:49:11.169Z","url":"/review/"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:49:44.489Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:49:45.359Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:49:45.495Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:49:45.651Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:49:45.814Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:49:46.700Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:49:47.727Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:49:47.894Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:49:57.395Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:49:57.895Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:49:58.046Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T13:50:19.617Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T13:50:19.631Z"}
+{"level":"info","message":"POST /review/create/65f85d8c2bb6fccac78084d3 - 200 - 2739ms","method":"POST","responseTime":"2739ms","status":200,"timestamp":"2024-03-19T13:50:21.849Z","url":"/review/create/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:50:28.536Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:29.445Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:50:29.582Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:50:29.729Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:33.707Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:33.828Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:33.933Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:34.051Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:34.247Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:50:34.527Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:50:34.629Z","url":"/review/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:51:21.627Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 0ms","method":"GET","responseTime":"0ms","status":404,"timestamp":"2024-03-19T13:51:22.265Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:22.404Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:22.538Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:22.812Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:30.261Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:30.677Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:30.804Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:30.940Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 1ms","method":"GET","responseTime":"1ms","status":404,"timestamp":"2024-03-19T13:51:31.110Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T13:51:38.213Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T13:51:38.220Z"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 5ms","method":"GET","responseTime":"5ms","status":404,"timestamp":"2024-03-19T13:51:49.832Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-19T13:51:59.478Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-19T13:53:06.238Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-19T13:53:06.251Z"}
+{"level":"info","message":"GET /review/listing/65f85d8c2bb6fccac78084d3 - 200 - 1888ms","method":"GET","responseTime":"1888ms","status":200,"timestamp":"2024-03-19T13:53:07.449Z","url":"/review/listing/65f85d8c2bb6fccac78084d3"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-27T14:31:04.145Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-27T14:31:04.152Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:12:19.175Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:12:19.187Z"}
+{"level":"info","message":"GET /documentations/ - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:12:39.201Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 1ms","method":"GET","responseTime":"1ms","status":200,"timestamp":"2024-03-28T15:12:39.290Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 200 - 17ms","method":"GET","responseTime":"17ms","status":200,"timestamp":"2024-03-28T15:12:39.296Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 200 - 14ms","method":"GET","responseTime":"14ms","status":200,"timestamp":"2024-03-28T15:12:39.302Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 200 - 25ms","method":"GET","responseTime":"25ms","status":200,"timestamp":"2024-03-28T15:12:39.313Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:13:50.188Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:13:50.195Z"}
+{"level":"info","message":"GET /documentations/ - 304 - 9ms","method":"GET","responseTime":"9ms","status":304,"timestamp":"2024-03-28T15:17:28.231Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:17:28.271Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:17:28.275Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:17:28.279Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:17:28.283Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 200 - 3ms","method":"GET","responseTime":"3ms","status":200,"timestamp":"2024-03-28T15:17:28.538Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:17:30.274Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:17:30.277Z"}
+{"level":"info","message":"GET /documentations/ - 304 - 9ms","method":"GET","responseTime":"9ms","status":304,"timestamp":"2024-03-28T15:19:25.180Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:19:25.225Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:19:25.229Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:19:25.231Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:19:25.234Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:19:25.453Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:19:27.206Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:19:27.209Z"}
+{"level":"info","message":"GET /documentations/ - 304 - 22ms","method":"GET","responseTime":"22ms","status":304,"timestamp":"2024-03-28T15:23:10.167Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 5ms","method":"GET","responseTime":"5ms","status":304,"timestamp":"2024-03-28T15:23:10.210Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:23:10.216Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:23:10.220Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 5ms","method":"GET","responseTime":"5ms","status":304,"timestamp":"2024-03-28T15:23:10.222Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:23:10.584Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:23:11.769Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:23:11.772Z"}
+{"level":"info","message":"GET /listings - 404 - 2ms","method":"GET","responseTime":"2ms","status":404,"timestamp":"2024-03-28T15:25:09.973Z","url":"/listings"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:26:53.533Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:26:53.543Z"}
+{"level":"info","message":"GET /documentations/ - 304 - 10ms","method":"GET","responseTime":"10ms","status":304,"timestamp":"2024-03-28T15:27:45.895Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:27:45.953Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:27:45.959Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:27:45.961Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:27:45.965Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:27:46.434Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:27:47.693Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:27:47.695Z"}
+{"level":"info","message":"Listings fetched successfully","timestamp":"2024-03-28T15:27:54.221Z"}
+{"level":"info","message":"GET /properties - 200 - 955ms","method":"GET","responseTime":"955ms","status":200,"timestamp":"2024-03-28T15:27:54.244Z","url":"/properties"}
+{"level":"info","message":"Listings fetched successfully for search:","search":"goa","timestamp":"2024-03-28T15:28:45.394Z"}
+{"level":"info","message":"GET /properties/search/goa - 200 - 456ms","method":"GET","responseTime":"456ms","status":200,"timestamp":"2024-03-28T15:28:45.403Z","url":"/properties/search/goa"}
+{"level":"info","message":"GET /documentations/ - 304 - 7ms","method":"GET","responseTime":"7ms","status":304,"timestamp":"2024-03-28T15:33:57.672Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 5ms","method":"GET","responseTime":"5ms","status":304,"timestamp":"2024-03-28T15:33:57.717Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 6ms","method":"GET","responseTime":"6ms","status":304,"timestamp":"2024-03-28T15:33:57.719Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:33:57.723Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:33:57.727Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:33:58.254Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:33:59.720Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:33:59.722Z"}
+{"level":"info","message":"GET /reviews - 404 - 4ms","method":"GET","responseTime":"4ms","status":404,"timestamp":"2024-03-28T15:34:22.119Z","url":"/reviews"}
+{"level":"info","message":"GET /documentations/ - 304 - 10ms","method":"GET","responseTime":"10ms","status":304,"timestamp":"2024-03-28T15:34:57.781Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:34:57.833Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:34:57.840Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:34:57.843Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 5ms","method":"GET","responseTime":"5ms","status":304,"timestamp":"2024-03-28T15:34:57.846Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:34:58.403Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:35:00.850Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:35:00.853Z"}
+{"level":"info","message":"GET /review - 200 - 524ms","method":"GET","responseTime":"524ms","status":200,"timestamp":"2024-03-28T15:35:03.715Z","url":"/review"}
+{"level":"info","message":"GET /documentations/ - 304 - 9ms","method":"GET","responseTime":"9ms","status":304,"timestamp":"2024-03-28T15:37:01.571Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:37:01.611Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:37:01.615Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 200 - 2ms","method":"GET","responseTime":"2ms","status":200,"timestamp":"2024-03-28T15:37:01.619Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:37:01.621Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:37:01.850Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-03-28T15:37:03.648Z"}
+{"level":"info","message":"Server is running on port 8500","timestamp":"2024-03-28T15:37:03.650Z"}
+{"level":"info","message":"GET /documentations/ - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:37:14.522Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 3ms","method":"GET","responseTime":"3ms","status":304,"timestamp":"2024-03-28T15:37:14.586Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 6ms","method":"GET","responseTime":"6ms","status":304,"timestamp":"2024-03-28T15:37:14.590Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 11ms","method":"GET","responseTime":"11ms","status":304,"timestamp":"2024-03-28T15:37:14.595Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:37:14.599Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:37:14.866Z","url":"/documentations/favicon-32x32.png"}
+{"level":"info","message":"GET /documentations/ - 304 - 4ms","method":"GET","responseTime":"4ms","status":304,"timestamp":"2024-03-28T15:37:54.408Z","url":"/documentations/"}
+{"level":"info","message":"GET /documentations/swagger-ui.css - 304 - 2ms","method":"GET","responseTime":"2ms","status":304,"timestamp":"2024-03-28T15:37:54.484Z","url":"/documentations/swagger-ui.css"}
+{"level":"info","message":"GET /documentations/swagger-ui-init.js - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:37:54.489Z","url":"/documentations/swagger-ui-init.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-bundle.js - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:37:54.493Z","url":"/documentations/swagger-ui-bundle.js"}
+{"level":"info","message":"GET /documentations/swagger-ui-standalone-preset.js - 304 - 5ms","method":"GET","responseTime":"5ms","status":304,"timestamp":"2024-03-28T15:37:54.497Z","url":"/documentations/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"GET /documentations/favicon-32x32.png - 304 - 1ms","method":"GET","responseTime":"1ms","status":304,"timestamp":"2024-03-28T15:37:54.730Z","url":"/documentations/favicon-32x32.png"}

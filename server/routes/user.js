@@ -70,3 +70,178 @@ router.get('/:userId/reservations', async (req, res) => {
 });
 
 module.exports = router;
+
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Trip:
+ *       type: object
+ *       properties:
+ *         customerId:
+ *           type: string
+ *         hostId:
+ *           type: string
+ *         listingId:
+ *           type: string
+ *     User:
+ *       type: object
+ *       properties:
+ *         userId:
+ *           type: string
+ *     Listing:
+ *       type: object
+ *       properties:
+ *         listingId:
+ *           type: string
+ *     SuccessResponse:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *           example: true
+ *         message:
+ *           type: string
+ *           example: Operation successful
+ *         data:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Trip'
+ *     ErrorResponse:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *           example: false
+ *         message:
+ *           type: string
+ *           example: Internal server error
+ *   securitySchemes:
+ *     BearerAuth:
+ *       type: apiKey
+ *       in: header
+ *       name: Authorization
+ *       description: Enter your Bearer token in the format "Bearer {token}"
+ */
+
+/**
+ * @swagger
+ * /users/{userId}/trips:
+ *   get:
+ *     summary: Get trips for a user.
+ *     tags: [Trips]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         type: string
+ *         description: ID of the user.
+ *     responses:
+ *       '202':
+ *         description: Trips fetched successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '404':
+ *         description: Trips not found.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /users/{userId}/wishlist/{listingId}:
+ *   patch:
+ *     summary: Add or remove a listing from user's wishlist.
+ *     tags: [Wishlist]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         type: string
+ *         description: ID of the user.
+ *       - in: path
+ *         name: listingId
+ *         required: true
+ *         type: string
+ *         description: ID of the listing.
+ *     responses:
+ *       '200':
+ *         description: Operation successful.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '404':
+ *         description: Operation failed.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /users/{userId}/properties:
+ *   get:
+ *     summary: Get properties created by a user.
+ *     tags: [Properties]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         type: string
+ *         description: ID of the user.
+ *     responses:
+ *       '202':
+ *         description: Properties fetched successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '404':
+ *         description: Properties not found.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /users/{userId}/reservations:
+ *   get:
+ *     summary: Get reservations made by a user.
+ *     tags: [Reservations]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: userId
+ *         required: true
+ *         type: string
+ *         description: ID of the user.
+ *     responses:
+ *       '202':
+ *         description: Reservations fetched successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '404':
+ *         description: Reservations not found.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */

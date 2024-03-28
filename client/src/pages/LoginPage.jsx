@@ -19,7 +19,7 @@ const LoginPage = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch ("http://localhost:8500/auth/login", {
+      const response = await fetch ("https://dark-teal-hatchling-hem.cyclic.app/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -42,7 +42,7 @@ console.log(loggedIn.message)
         toast.success(loggedIn.message, {
           position: "top-center",
         });
-        setTimeout(() => navigate("/"), 3000); // Navigate after 5 seconds
+        setTimeout(() => navigate("/"), 2000); // Navigate after 5 seconds
       }else{
         toast.error(loggedIn.message, {
           position: "top-center",

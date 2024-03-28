@@ -130,7 +130,7 @@ const CreateListing = () => {
       });
 
       /* Send a POST request to server */
-      const response = await fetch("http://localhost:8500/properties/create", {
+      const response = await fetch("https://dark-teal-hatchling-hem.cyclic.app/properties/create", {
         method: "POST",
         body: listingForm,
       });
@@ -169,7 +169,7 @@ const CreateListing = () => {
                   onClick={() => setCategory(item.label)}
                 >
                   <div className="category_icon">{item.icon}</div>
-                  <p>{item.label}</p>
+                  <p className="category_name">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -266,9 +266,12 @@ const CreateListing = () => {
                       guestCount > 1 && setGuestCount(guestCount - 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                   <p>{guestCount}</p>
@@ -277,9 +280,12 @@ const CreateListing = () => {
                       setGuestCount(guestCount + 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                 </div>
@@ -293,9 +299,12 @@ const CreateListing = () => {
                       bedroomCount > 1 && setBedroomCount(bedroomCount - 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                   <p>{bedroomCount}</p>
@@ -304,9 +313,12 @@ const CreateListing = () => {
                       setBedroomCount(bedroomCount + 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                 </div>
@@ -320,9 +332,12 @@ const CreateListing = () => {
                       bedCount > 1 && setBedCount(bedCount - 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                   <p>{bedCount}</p>
@@ -331,9 +346,12 @@ const CreateListing = () => {
                       setBedCount(bedCount + 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                 </div>
@@ -347,9 +365,12 @@ const CreateListing = () => {
                       bathroomCount > 1 && setBathroomCount(bathroomCount - 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                   <p>{bathroomCount}</p>
@@ -358,9 +379,12 @@ const CreateListing = () => {
                       setBathroomCount(bathroomCount + 1);
                     }}
                     sx={{
-                      fontSize: "25px",
+                      fontSize: "25px", 
                       cursor: "pointer",
-                      "&:hover": { color: variables.pinkred },
+                      "&:hover": { color: variables.pinkred }, 
+                      "@media (max-width:380px)": { 
+                        fontSize: "15px",
+                      },
                     }}
                   />
                 </div>

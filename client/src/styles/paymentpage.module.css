@@ -1,0 +1,302 @@
+.mainbox {
+  margin-top: 100px;
+  /* border: 1px solid rgb(0, 0, 255); */
+}
+
+.title {
+  /* border: 1px solid rgb(0, 255, 26); */
+  font-size: 40px;
+  width: 75%;
+  margin: auto;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.mainsubbox {
+  /* border: 1px solid rgb(0, 255, 26); */
+
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 80px;
+}
+.mainbox_1 {
+  /* border: 1px solid rgb(51, 0, 255); */
+  height: 800px;
+  width: 100%;
+}
+.mainbox_1_title {
+  margin-top: 10px;
+}
+
+.mainbox_1_date {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.mainbox_1_guest {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.mainbox_2 {
+  /* border: 1px solid rgb(0, 4, 255); */
+  display: flex;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  border-radius: 20px;
+  padding: 30px;
+  flex-direction: column;
+  height: 47%;
+}
+
+.paymentimage {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.mainbox_2_box_1 {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.mainbox_2_box_2 {
+  margin-top: 10px;
+}
+
+.mainbox_2_pricebox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.hrline {
+  height: 1px;
+  opacity: 0.2;
+  color: rgb(234, 234, 234);
+}
+
+.hrline_1 {
+  height: 1px;
+  opacity: 0.2;
+  color: rgb(234, 234, 234);
+}
+
+
+.hrline_divider{
+  border: none;
+}
+
+.mainbox_2_taxbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mainbox_2_totalpricebox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.paymentbox {
+  display: flex;
+  margin-top: 30px;
+}
+
+/* Style for the form container */
+.paymentForm {
+  margin-top: 10px;
+  width: 100%;
+  width: 100%;
+  margin: auto;
+
+  border-radius: 5px;
+}
+
+/* Style for form labels */
+.paymentForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for input fields */
+.paymentForm input,
+.paymentForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #989898;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Style for the expiry date container */
+.paymentForm .expiryContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  /* border: 1px solid red; */
+  align-items: center;
+}
+
+/* Style for the CVV input */
+.paymentForm #cvv {
+  width: calc(50% - 5px); /* Adjust based on your design */
+}
+
+/* Style for the submit button */
+.paymentForm .submitButton {
+  background-color: #631cf1;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.paymentForm .submitButton:hover {
+  background-color: #4c1dab;
+}
+
+/* Optional: Style for error messages */
+.paymentForm input:invalid {
+  border-color: rgb(199, 199, 199);
+}
+
+.paymentForm select:invalid {
+  border-color: rgb(0, 0, 0);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.expiryInputs {
+  display: flex;
+  /* Horizontally center the select containers */
+  align-items: center; /* Vertically center the select containers */
+  /* border: 1px solid red; */
+  flex-direction: row;
+  column-gap: 20px;
+  height: 100%;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .mainsubbox {
+    width: 100%;
+  }
+  .paymentbox{
+    padding: 30px;
+  }
+  .mainbox_2 {
+    box-shadow: none;
+  }
+
+  .mainbox_1_title {
+    padding: 0px 30px 0px 30px;
+    /* margin-top: 0px; */
+   
+  }
+  
+  .mainbox_1_date {
+    /* margin-top: 0px; */
+  padding: 0px 30px 0px 30px;
+    /* margin-bottom: 0px; */
+  }
+
+.mainbox_1_guest{
+  padding: 0px 30px 0px 30px;
+  /* margin-bottom: 0px; */
+}
+
+
+  .title{
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .paymentimage{
+    max-width: 150px;
+   
+  }
+  .mainsubbox {
+    grid-template-columns: 1fr; /* Change to single column layout */
+  }
+
+  .mainbox_2 {
+    height: auto; /* Adjust height as needed */
+    padding: 30px; /* Adjust padding as needed */
+    order: -1; /* Move this container to the beginning */
+  }
+
+  .hrline_1 {
+    border: none;
+    
+  }
+
+  .hrline_divider{
+    height: 5px;
+    width: 100%;
+    opacity: 0.5;
+    color: rgb(180, 180, 180);
+    background-color: #cbcbcb;
+    border: none;
+  }
+}
+
+/* Media query for even smaller screens */
+@media only screen and (max-width: 480px) {
+  .mainbox_2 {
+    box-shadow: none;
+  }
+
+  .paymentbox{
+    padding: 30px;
+  }
+  .title {
+    font-size: 30px; 
+   text-align: center;
+   margin: auto;
+  }
+  .paymentimage{
+    max-width: 100px;
+   
+  }
+
+  .hrline_divider{
+    height: 5px;
+    width: 100%;
+    opacity: 0.5;
+    color: rgb(180, 180, 180);
+    background-color: #cbcbcb;
+    border: none;
+  }
+  .hrline_1 {
+    border: none;
+  }
+}

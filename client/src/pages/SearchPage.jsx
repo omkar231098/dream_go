@@ -17,7 +17,7 @@ const SearchPage = () => {
 
   const getSearchListings = async () => {
     try {
-      const response = await fetch(`http://localhost:8500/properties/search/${search}`, {
+      const response = await fetch(`https://dark-teal-hatchling-hem.cyclic.app/properties/search/${search}`, {
         method: "GET"
       })
 

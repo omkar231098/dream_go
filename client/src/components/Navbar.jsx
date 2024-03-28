@@ -1,7 +1,7 @@
 import { IconButton } from "@mui/material";
 import { Search, Person, Menu } from "@mui/icons-material";
 import variables from "../styles/variables.scss";
-import { useState } from "react";
+import {useRef, useState, useEffect  } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "../styles/Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ const Navbar = ({ showSearchBar = true, showBecomeHostText = true }) => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-
+  const dropdownRef = useRef(null); // Ref for dropdown menu
 
 
   const handleBecomeHostClick = () => {
@@ -33,6 +33,22 @@ const Navbar = ({ showSearchBar = true, showBecomeHostText = true }) => {
     }
   };
 
+   // Function to handle clicking outside the dropdown menu
+   const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener when the component mounts
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="navbar">
@@ -89,17 +105,18 @@ const Navbar = ({ showSearchBar = true, showBecomeHostText = true }) => {
         </button>
 
         {dropdownMenu && !user && (
-          <div className="navbar_right_accountmenu">
+          <div className="navbar_right_accountmenu" ref={dropdownRef}>
             <Link to="/login">Log In</Link>
             <Link to="/register">Sign Up</Link>
           </div>
         )}
 
         {dropdownMenu && user && (
-          <div className="navbar_right_accountmenu">
+          <div className="navbar_right_accountmenu" ref={dropdownRef}>
             <Link to={`/${user._id}/trips`}>Reservation List</Link>
             <Link to={`/${user._id}/wishList`}>Wish List</Link>
             <Link to={`/${user._id}/properties`}>My Property List</Link>
+            <Link to={`/create-listing`}>Become Host</Link>
             {/* <Link to={`/${user._id}/reservations`}>Reservation List</Link> */}
             <Link
               to="/login"

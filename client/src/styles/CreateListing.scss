@@ -11,6 +11,9 @@ margin-top: 80px;
 
   h1 {
     color: $blue;
+    @include sm {
+      font-size: x-large;
+      }
   }
 
   &_step1 {
@@ -25,6 +28,10 @@ margin-top: 80px;
 
     h2 {
       color: $pinkred;
+
+      @include sm {
+      font-size: large;
+      }
     }
 
     hr {
@@ -34,6 +41,9 @@ margin-top: 80px;
     h3 {
       margin: 40px 0 20px;
       color: $blue;
+      @include sm {
+        font-size: small;
+        }
     }
 
     .category-list {
@@ -64,15 +74,31 @@ margin-top: 80px;
         cursor: pointer;
         transition: 0.2s ease;
 
+
+        @include sm {
+          width: 55px;
+          height: 45px;
+        }
+
+
         &_icon {
           font-size: 30px;
           color: black;
+
+
+          @include sm {
+            font-size: 15px;
+          }
         }
 
         p {
           font-weight: 600;
           text-align: center;
           color: black;
+
+          @include sm {
+            font-size: 8px;
+          }
         }
 
         &:hover {
@@ -91,6 +117,10 @@ margin-top: 80px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      @include sm {
+       
+        gap: 6px;
+      }
 
       .type {
         display: flex;
@@ -103,16 +133,36 @@ margin-top: 80px;
         cursor: pointer;
         transition: 0.3s ease;
 
+        @include sm {
+       
+          padding: 5px 30px;
+        }
+
         &_text {
           max-width: 400px;
 
           h4 {
             margin-bottom: 5px;
+
+            @include sm {
+              font-size: 10px;
+            }
+          }
+
+          p{
+            @include sm {
+              font-size: 8px;
+            }
           }
         }
 
         &_icon {
           font-size: 30px;
+
+          @include sm {
+            font-size: 18px;
+          }
+
         }
 
         &:hover {
@@ -148,6 +198,10 @@ margin-top: 80px;
       p {
         font-weight: 700;
         margin: 20px 0 10px;
+
+        @include sm {
+          font-size: small;
+          }
       }
       input {
         border: 1px solid $grey;
@@ -156,6 +210,11 @@ margin-top: 80px;
         font-size: 16px;
         font-weight: 600;
         width: 100%;
+
+        @include sm {
+          padding: 5px 15px;
+          font-size: small
+          }
 
         &:focus {
           outline: none;
@@ -168,6 +227,11 @@ margin-top: 80px;
       flex-wrap: wrap;
       gap: 40px;
 
+      @include sm {
+        gap: 10px;
+        }
+
+
       .basic {
         display: flex;
         align-items: center;
@@ -176,8 +240,19 @@ margin-top: 80px;
         border: 1px solid $grey;
         border-radius: 10px;
 
+
+        @include sm {
+          gap: 5px;
+          padding: 10px;
+         
+        }
+
+
         p {
           font-weight: 600;
+          @include sm {
+            font-size: 8px;
+            }
         }
 
         &_count {
@@ -186,8 +261,14 @@ margin-top: 80px;
           gap: 9px;
           font-size: 20px;
         }
+
+      
       }
+
+    
     }
+
+   
   }
 
   &_step2 {
@@ -202,6 +283,10 @@ margin-top: 80px;
 
     h2 {
       color: $pinkred;
+
+      @include sm {
+        font-size:large;
+        }
     }
 
     hr {
@@ -211,6 +296,10 @@ margin-top: 80px;
     h3 {
       margin: 40px 0 20px;
       color: $blue;
+
+      @include sm {
+        font-size: small;
+        }
     }
 
     .amenities {
@@ -230,12 +319,27 @@ margin-top: 80px;
         cursor: pointer;
         transition: 0.2s ease;
 
+
+        @include sm {
+          text-align: center;
+          width: 55px;
+          height: 48px;
+        }
+
+
+
         &_icon {
           font-size: 30px;
+          @include sm {
+            font-size: 15px;
+          }
         }
 
         p {
           font-weight: 600;
+          @include sm {
+            font-size: 8px;
+            }
         }
 
         &:hover {
@@ -260,6 +364,8 @@ margin-top: 80px;
         width: 250px;
         height: 150px;
         cursor: move;
+
+      
 
         img {
           width: 100%;
@@ -292,11 +398,17 @@ margin-top: 80px;
 
         .icon {
           font-size: 60px;
+          @include sm {
+            font-size: 25px;
+          }
         }
 
         p {
           font-weight: 600;
           text-align: center;
+          @include sm {
+            font-size: 8px;
+            }
         }
       }
 
@@ -314,7 +426,7 @@ margin-top: 80px;
         }
 
         @include sm {
-          padding: 40px 30px;
+          padding: 15px 15px;
         }
       }
     }
@@ -328,6 +440,12 @@ margin-top: 80px;
         font-weight: 600;
         width: 100%;
 
+        @include sm {
+          padding: 5px 15px;
+          font-size: small
+          }
+
+
         &:focus {
           outline: none;
         }
@@ -338,6 +456,9 @@ margin-top: 80px;
       p {
         font-weight: 700;
         margin: 20px 0 10px;
+        @include sm {
+          font-size: small;
+          }
       }
 
       input,
@@ -359,6 +480,8 @@ margin-top: 80px;
 
         @include sm {
           width: 280px;
+          padding: 5px 15px;
+          font-size: small
         }
 
         &:focus {
@@ -370,6 +493,9 @@ margin-top: 80px;
         font-size: 25px;
         font-weight: 700;
         margin-right: 20px;
+        @include sm {
+          font-size: large;
+        }
       }
 
       .price {
@@ -379,7 +505,16 @@ margin-top: 80px;
   }
 
   .submit_btn {
+
+    
     margin-top: 40px;
+    @include sm {
+       margin-left: 100px;
+      font-size: 8px;
+  
+      
+    }
+
 
     @include buttonStyle;
 

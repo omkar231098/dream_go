@@ -17,8 +17,8 @@ const Listings = () => {
       try {
         const response = await fetch(
           selectedCategory !== "All"
-            ? `http://localhost:8500/properties?category=${selectedCategory}`
-            : "http://localhost:8500/properties",
+            ? `https://dark-teal-hatchling-hem.cyclic.app/properties?category=${selectedCategory}`
+            : "https://dark-teal-hatchling-hem.cyclic.app/properties",
           {
             method: "GET",
           }

@@ -20,7 +20,7 @@ const TripList = () => {
     const getTripList = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8500/users/${userId}/trips`,
+          `https://dark-teal-hatchling-hem.cyclic.app/users/${userId}/trips`,
           {
             method: "GET",
           }
@@ -45,7 +45,7 @@ const TripList = () => {
   ) : (
     <>
       <Navbar />
-      <h1 className="title-list">Your Trip List</h1>
+      <h1 className="title-list">Your Reservation List</h1>
       <div className="list">
         {tripList?.map(({ _id,listingId, hostId, startDate, endDate, totalPrice, booking=true }) => (
           <ListingCard

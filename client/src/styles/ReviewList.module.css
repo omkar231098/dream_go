@@ -1,0 +1,75 @@
+/* ReviewList.module.css */
+.reviewlist{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  
+}
+
+.reviewItem {
+    display: flex;
+    /* border-bottom: 1px solid #ccc; */
+    padding: 20px 20px;
+   flex-direction: column;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+  }
+  .imagebox{
+display: flex;
+flex-direction: row;
+align-items: center;
+  }
+
+  .reviewbox{
+    display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 10px;
+column-gap: 10px;
+
+  }
+  .reviewItem img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 12px;
+  }
+  
+  .reviewItem .userInfo {
+    flex-grow: 1;
+  }
+  
+  .reviewItem .reviewText {
+    margin-top: 10px;
+  }
+  
+  .reviewItem .reviewDate {
+    font-size: small;
+    color: #777;
+    margin-top: 5px;
+  }
+  a {
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: 600;
+  }
+  
+  a:hover {
+    color: #4c1dab
+  }
+
+
+  
+@media only screen and (max-width: 768px) {
+  .reviewlist {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .reviewItem img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 0;
+  }
+}

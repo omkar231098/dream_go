@@ -77,7 +77,16 @@ const ListingSchema = new mongoose.Schema(
     price: {
       type: Number,
       required: true,
-    }
+    },
+    reviews: [{ type: mongoose.Types.ObjectId, ref: "Review" }],
+    averageRating: {
+    type: Number,
+    default: 0,
+  },
+  totalRating: {
+    type: Number,
+    default: 0,
+  }
   },
   { timestamps: true}
 )

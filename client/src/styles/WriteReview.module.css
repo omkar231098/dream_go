@@ -1,0 +1,44 @@
+
+.reviewForm {
+    margin-top: 20px;
+  }
+  
+  .reviewLabel {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .reviewTextarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Allow vertical resizing */
+    max-height: 200px; /* Set the maximum height */
+    overflow-y: auto; /* Add a scrollbar when content exceeds the height */
+  }
+  .reviewButtons{
+    display: flex;
+    justify-content: space-between;
+  }
+  .reviewButton {
+    padding: 8px 10px;
+    background-color: #4c1dab;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ .cancelButton{
+    padding: 8px 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+  .reviewButton:hover {
+    background-color: #6a2ee1;
+  }

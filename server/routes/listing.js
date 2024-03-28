@@ -18,8 +18,14 @@ const upload = multer({ storage });
 
 
 /* CREATE LISTING */
-router.post("/create",limiter , upload.array("listingPhotos"), async (req, res) => {
+router.post("/create",  upload.array("listingPhotos"),limiter, async (req, res) => {
   try {
+
+    if (req.rateLimit) {
+      // Rate limit exceeded, send a custom response
+      return res.status(429).json({ message: "You can add only 1 listings. Required Project Admin Permission", error: err.message });
+    }
+  
     /* Take the information from the form */
     const {
       creator,
@@ -224,3 +230,281 @@ router.delete('/:listingId', async (req, res) => {
 
 
 module.exports = router
+
+
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Listing:
+ *       type: object
+ *       properties:
+ *         creator:
+ *           type: string
+ *         category:
+ *           type: string
+ *         type:
+ *           type: string
+ *         streetAddress:
+ *           type: string
+ *         aptSuite:
+ *           type: string
+ *         city:
+ *           type: string
+ *         province:
+ *           type: string
+ *         country:
+ *           type: string
+ *         guestCount:
+ *           type: integer
+ *         bedroomCount:
+ *           type: integer
+ *         bedCount:
+ *           type: integer
+ *         bathroomCount:
+ *           type: integer
+ *         amenities:
+ *           type: array
+ *           items:
+ *             type: string
+ *         title:
+ *           type: string
+ *         description:
+ *           type: string
+ *         highlight:
+ *           type: string
+ *         highlightDesc:
+ *           type: string
+ *         price:
+ *           type: number
+ *         listingPhotoPaths:
+ *           type: array
+ *           items:
+ *             type: object
+ *             properties:
+ *               fileId:
+ *                 type: string
+ *               url:
+ *                 type: string
+ *     SuccessResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: Listing created successfully!
+ *         listing:
+ *           $ref: '#/components/schemas/Listing'
+ *     ErrorResponse:
+ *       type: object
+ *       properties:
+ *         message:
+ *           type: string
+ *           example: Fail to create Listing
+ *         error:
+ *           type: string
+ *     DeletedResponse:
+ *       type: object
+ *       properties:
+ *         success:
+ *           type: boolean
+ *           example: true
+ *         message:
+ *           type: string
+ *           example: Listing and associated images deleted successfully
+ *         deletedListing:
+ *           $ref: '#/components/schemas/Listing'
+ *         response:
+ *           type: object
+ *           properties:
+ *             successfullyDeletedFileIds:
+ *               type: array
+ *               items:
+ *                 type: string
+ *   securitySchemes:
+ *     BearerAuth:
+ *       type: apiKey
+ *       in: header
+ *       name: Authorization
+ *       description: Enter your Bearer token in the format "Bearer {token}"
+ */
+
+/**
+ * @swagger
+ * /properties/create:
+ *   post:
+ *     summary: Create a new listing.
+ *     tags: [Listings]
+ *     security:
+ *       - BearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               creator:
+ *                 type: string
+ *               category:
+ *                 type: string
+ *               type:
+ *                 type: string
+ *               streetAddress:
+ *                 type: string
+ *               aptSuite:
+ *                 type: string
+ *               city:
+ *                 type: string
+ *               province:
+ *                 type: string
+ *               country:
+ *                 type: string
+ *               guestCount:
+ *                 type: integer
+ *               bedroomCount:
+ *                 type: integer
+ *               bedCount:
+ *                 type: integer
+ *               bathroomCount:
+ *                 type: integer
+ *               amenities:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *               title:
+ *                 type: string
+ *               description:
+ *                 type: string
+ *               highlight:
+ *                 type: string
+ *               highlightDesc:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *               listingPhotos:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       '200':
+ *         description: Listing created successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/SuccessResponse'
+ *       '400':
+ *         description: Fail to create Listing.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /properties:
+ *   get:
+ *     summary: Get listings by category or all listings.
+ *     tags: [Listings]
+ *     responses:
+ *       '200':
+ *         description: Listings fetched successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Listing'
+ *       '404':
+ *         description: Fail to fetch listings.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /properties/search/{search}:
+ *   get:
+ *     summary: Get listings by search keyword.
+ *     tags: [Listings]
+ *     parameters:
+ *       - in: path
+ *         name: search
+ *         required: true
+ *         type: string
+ *         description: Search keyword for listings.
+ *     responses:
+ *       '200':
+ *         description: Listings fetched successfully for search.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Listing'
+ *       '404':
+ *         description: Fail to fetch listings for search.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /properties/{listingId}:
+ *   get:
+ *     summary: Get listing details by ID.
+ *     tags: [Listings]
+ *     parameters:
+ *       - in: path
+ *         name: listingId
+ *         required: true
+ *         type: string
+ *         description: Listing ID to fetch details.
+ *     responses:
+ *       '202':
+ *         description: Listing fetched successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Listing'
+ *       '404':
+ *         description: Listing not found.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /properties/{listingId}:
+ *   delete:
+ *     summary: Delete a listing by ID.
+ *     tags: [Listings]
+ *     security:
+ *       - BearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: listingId
+ *         required: true
+ *         type: string
+ *         description: Listing ID to delete.
+ *     responses:
+ *       '200':
+ *         description: Listing and associated images deleted successfully.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/DeletedResponse'
+ *       '404':
+ *         description: Listing not found for deletion.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */

@@ -40,8 +40,14 @@ export const userSlice = createSlice({
       state.user.tripList = state.user.tripList.filter(property => property._id !== action.payload);
     
       console.log(action.payload); // Logging the payload for debugging purposes
+    },
+    setReviews: (state, action) => {
+      state.reviews = action.payload;
     }
-   
+    ,
+    addReview: (state, action) => {
+      state.reviews.push(action.payload); // Add new review to reviews array
+    },
   },
 });
 
@@ -54,7 +60,9 @@ export const {
   setPropertyList,
   setReservationList,
   deleteProperty, // Include the new deleteProperty action
-  deleteTrip
+  deleteTrip,
+  setReviews,
+  addReview,
 } = userSlice.actions;
 
 export default userSlice.reducer;

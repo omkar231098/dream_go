@@ -5,6 +5,7 @@ import {
   ArrowBackIosNew,
   Favorite,
 } from "@mui/icons-material";
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setWishList } from "../redux/state";
@@ -57,7 +58,7 @@ const ListingCard = ({
   const handleDelete = async () => {
     try {
       // Perform the delete action here, e.g., by making a DELETE request to your API
-     const response= await fetch(`http://localhost:8500/properties/${listingId}`, {
+     const response= await fetch(`https://dark-teal-hatchling-hem.cyclic.app/properties/${listingId}`, {
         method: "DELETE",
       });
 
@@ -77,7 +78,7 @@ console.log(response)
   const handleReserve = async () => {
     // console.log(bookingId)
     try {
-      const response = await fetch(`http://localhost:8500/bookings/delete/${bookingId}`, {
+      const response = await fetch(`https://dark-teal-hatchling-hem.cyclic.app/bookings/delete/${bookingId}`, {
         method: "DELETE",
       });
 
@@ -109,7 +110,7 @@ console.log(response)
     if (user?._id !== creator._id) {
       try {
         const response = await fetch(
-          `http://localhost:8500/users/${user?._id}/${listingId}`,
+          `https://dark-teal-hatchling-hem.cyclic.app/users/${user?._id}/${listingId}`,
           {
             method: "PATCH",
             headers: {
@@ -189,11 +190,11 @@ console.log(response)
       <h3>
         {city}, {province}, {country}
       </h3>
-      <p>{category}</p>
+      <p className="categorycolor">{category}</p>
 
       {!booking ? (
         <>
-          <p>{type}</p>
+          <p className="typecolor">{type}</p>
           <p >
             <span  className="price_tag">₹{price}</span> per night
           </p>
@@ -208,7 +209,7 @@ console.log(response)
             {startDate} - {endDate}
           </p>
           <p>
-            <span>${totalPrice}</span> total
+            <span>₹{totalPrice}</span> total
           </p>
          
         </>
@@ -223,9 +224,9 @@ console.log(response)
         disabled={!user}
       >
         {isLiked ? (
-          <Favorite sx={{ color: "red" }} />
+          <FavoriteTwoToneIcon sx={{ color: "red" }} />
         ) : (
-          <Favorite sx={{ color: "black" }} />
+          <FavoriteTwoToneIcon sx={{ color: "white" }} />
         )}
       </button>)}
      

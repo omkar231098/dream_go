@@ -2,7 +2,9 @@
 @import "./breakpoints.scss";
 
 .listing-details {
+  margin-top: 100px;
   padding: 40px 130px 120px;
+
 
   @include xl {
     padding: 40px 80px 120px;
@@ -85,7 +87,7 @@
 
     @include lg {
       flex-direction: column;
-      gap: 50px;
+      gap: 20px;
     }
 
     .amenities {
@@ -133,6 +135,70 @@
           max-width: 300px;
         }
       }
+      .button:hover{
+        background-color: #6a2ee1;
+      }
+
+
+      
+
+
     }
   }
+
+
+  .review-section {
+    margin-top: 20px;
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-height: 230px; /* Set a max height for the minimized state */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.3s ease; /* Smooth transition for max-height change */
+    border-radius: 10px;
+   
+    &.expanded {
+      max-height: none; /* Expand to show all content when expanded */
+    }
+
+   
+  }
+
+  .reviewtitle{
+    margin-bottom: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+
+    .review-section {
+      max-height: 230px;
+ 
+    }
+
+  }
+  .expand-link {
+    color: black; /* Change color to black */
+    cursor: pointer;
+    text-decoration: none; /* Remove underlines */
+    display: inline-block; /* Ensure link is displayed as a block */
+
+  }
+
+  /* Optional: Add styles for FontAwesome icons if using */
+  .expand-link svg {
+    margin-left: 5px; /* Adjust spacing between icon and text */
+  }
+  .WriteReviewButton{
+    padding: 5px 8px;
+    background-color: #4c1dab;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .WriteReviewButton:hover{
+    background-color: #6a2ee1;
+  }
 }
+

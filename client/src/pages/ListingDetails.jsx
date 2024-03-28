@@ -11,17 +11,32 @@ import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
 import { toast } from 'react-toastify';
+import ReviewList from "./ReviewList";
 
-const ListingDetails = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
+import "react-date-range/dist/styles.css"; // Import styles
+import "react-date-range/dist/theme/default.css"; // Import theme styles
+
+import WriteReview from '../pages/WriteReview';
+
+const ListingDetails = (data) => {
   const [loading, setLoading] = useState(true);
-
+ 
   const { listingId } = useParams();
   const [listing, setListing] = useState(null);
-
+  const [expanded, setExpanded] = useState(false); // State for expanded review section
+  const [writingReview, setWritingReview] = useState(false);
+    // Function to toggle expanded state
+    const toggleExpand = () => {
+      setExpanded(!expanded);
+    };
+  
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8500/properties/${listingId}`,
+        `https://dark-teal-hatchling-hem.cyclic.app/properties/${listingId}`,
         {
           method: "GET",
         }
@@ -36,6 +51,14 @@ const ListingDetails = () => {
     }
   };
 
+  const handleWriteReview = () => {
+    setWritingReview(true);
+  };
+
+  const handleCloseReview = () => {
+    setWritingReview(false);
+  };
+
   useEffect(() => {
     getListingDetails();
   }, []);
@@ -48,6 +71,8 @@ const ListingDetails = () => {
       key: "selection",
     },
   ]);
+
+  const customRangeColors = ['#4c1dab', '#4c1dab', '#4c1dab'];
 
   const handleSelect = (ranges) => {
     // Update the selected date range when user makes a selection
@@ -64,35 +89,41 @@ const ListingDetails = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    try {
-      const bookingForm = {
-        customerId,
-        listingId,
-        hostId: listing.creator._id,
-        startDate: dateRange[0].startDate.toDateString(),
-        endDate: dateRange[0].endDate.toDateString(),
-        totalPrice: listing.price * dayCount,
-      };
 
-      const response = await fetch("http://localhost:8500/bookings/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(bookingForm),
-      });
-
-      if (response.ok) {
-        toast.success("Reservation is successful.", {
+        if (!customerId) {
+        // If user is not logged in, show a message to log in
+        toast.warning("Please log in to make a reservation.", {
           position: "top-center",
         });
 
-        setTimeout(() => navigate(`/${customerId}/trips`), 3000); 
-      
+        setTimeout(() => navigate("/login"), 4000); 
+        return; // Prevent further execution
       }
-    } catch (err) {
-      console.log("Submit Booking Failed.", err.message);
-    }
+
+      if (dayCount < 1) {
+        // Check if user has selected at least 1 night
+        toast.error("Please select at least 1 night.", {
+          position: "top-center",
+        });
+        return; // Prevent further execution
+      }
+      
+    navigate(`/payment/${listingId}`, { state: {
+       dateRange ,
+        title: listing.title,
+        imageUrl: listing.listingPhotoPaths[0]?.url,
+        type:listing.type,
+        Listingprice:listing.price,
+        count:dayCount,
+      guestcount:listing.guestCount,
+      customerId:customerId,
+      lisitingCreator:listing.creator._id,
+      startDate: dateRange[0].startDate.toDateString(),
+      endDate: dateRange[0].endDate.toDateString(),
+      } });
+    
+
+    
   };
 
   return loading ? (
@@ -157,23 +188,46 @@ const ListingDetails = () => {
                 </div>
               ))}
             </div>
-          </div>
 
+
+            <div>
+        {writingReview ? (
+          <WriteReview listingId={listingId} onClose={handleCloseReview} />
+        ) : (
+          <button className='WriteReviewButton' onClick={handleWriteReview}>
+            Write Review
+          </button>
+        )}
+      </div>
+
+    <div className={`review-section ${expanded ? 'expanded' : ''}`}>
+          <h2 className='reviewtitle'>Reviews</h2>
+          <ReviewList listingId={listingId}  /> {/* Pass listingId to ReviewList component */}
+        </div>
+
+        {/* Always show the link */}
+        <p className="expand-link" onClick={toggleExpand}>
+          <FontAwesomeIcon icon={expanded ? faChevronUp : faChevronDown} />
+        </p>
+
+          </div>
+    
+        
           <div>
             <h2>How long do you want to stay?</h2>
             <div className="date-range-calendar">
-              <DateRange ranges={dateRange} onChange={handleSelect} />
+              <DateRange ranges={dateRange} onChange={handleSelect}  rangeColors={customRangeColors}  />
               {dayCount > 1 ? (
                 <h2>
-                  ${listing.price} x {dayCount} nights
+                 ₹{listing.price} x {dayCount} nights
                 </h2>
               ) : (
                 <h2>
-                  ${listing.price} x {dayCount} night
+                  ₹{listing.price} x {dayCount} night
                 </h2>
               )}
 
-              <h2>Total price: ${listing.price * dayCount}</h2>
+              <h2>Total price: ₹{listing.price * dayCount}</h2>
               <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
               <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 

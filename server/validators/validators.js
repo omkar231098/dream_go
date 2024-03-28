@@ -1,32 +1,32 @@
-// validators.js
+// Function to validate email using regex
+const isValidEmail = (email) => {
+  // Regular expression for email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
 
-const { body, validationResult } = require('express-validator');
+// Function to validate password
+const isValidPassword = (password) => {
+  // Implement your custom password validation logic
+  // For simplicity, this example checks if the password is at least 6 characters long
+  return password.length >= 6;
+};
 
-// Register Validator
-const registerValidator = [
-  body('firstName').notEmpty().withMessage('First name is required'),
-  body('lastName').notEmpty().withMessage('Last name is required'),
-  body('email').isEmail().withMessage('Invalid email address'),
-  body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
-];
+const validateEmailAndPassword = (req, res, next) => {
+  const { email, password } = req.body;
 
-// Login Validator
-const loginValidator = [
-  body('email').isEmail().withMessage('Invalid email address'),
-  body('password').notEmpty().withMessage('Password is required'),
-];
-
-// Function to handle validation errors
-const validate = (req, res, next) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
+  // Validate email
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ success: false, message: 'Invalid email format' });
   }
+
+  // Validate password
+  if (!isValidPassword(password)) {
+    return res.status(400).json({ success: false, message: 'Invalid password format, Password is at least 6 characters long' });
+  }
+
+  // If both email and password are valid, continue to the next middleware or route handler
   next();
 };
 
-module.exports = {
-  registerValidator,
-  loginValidator,
-  validate,
-};
+module.exports = { validateEmailAndPassword };
