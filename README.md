@@ -15,6 +15,7 @@ DreamGo: Your ultimate vacation rental destination. Find your dream getaway with
 - [Validator](#validator)
 - [Screenshots](#screenshots)
 - [Deployed Link](#deployed-link)
+- [API Documentation](#api-documentation)
 - [Contribution](#contribution)
 - [License](#license)
 
@@ -219,6 +220,13 @@ Input validation is essential for ensuring that user-submitted data is accurate 
 
 ## Deployed Link
 The Dream GO Frontend is deployed at https://dreamgo-green.vercel.app/
+
+## API Documentation
+
+For detailed API documentation, view the Swagger documentation:
+
+- [Swagger Documentation](https://dark-teal-hatchling-hem.cyclic.app/documentations) - Click to view API documentation using Swagger.
+
 
 ## Contribution
 
